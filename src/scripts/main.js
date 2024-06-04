@@ -1,8 +1,13 @@
-console.log('Welcome to the main module');
-import { createPlan } from './plan.js';
+console.log("Welcome to the main module");
+import { addPlant, usePlants } from "./field.js";
+import { createPlan } from "./plan.js";
+import { createCorn } from "./seeds/corn.js";
 
 const yearlyPlan = createPlan();
 
 const cornSeed = createCorn();
 
-console.log(cornSeed);
+// test code for field.js below. Works!
+addPlant(cornSeed);
+const currentGrowingPlants = usePlants();
+console.log(currentGrowingPlants);

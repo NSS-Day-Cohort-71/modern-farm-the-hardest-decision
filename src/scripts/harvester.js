@@ -10,5 +10,5 @@ export const harvestPlants = (plants) => {
       for (let i = 0; i < plant.output; i++) seedOutput.push(plant);
     }
   }
+  return seedOutput;
 };
-return seedOutput;

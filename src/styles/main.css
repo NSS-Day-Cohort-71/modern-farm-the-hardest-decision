@@ -46,6 +46,9 @@ h6 {
   align-items: center;
   margin: 0 0 0 0;
   background-color: #fff3b0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .plant {

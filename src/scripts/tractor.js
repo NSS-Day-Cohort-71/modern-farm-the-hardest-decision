@@ -4,7 +4,8 @@ import { createSoybean } from './seeds/soybean.js';
 import { createWheat } from './seeds/wheat.js';
 import { createCorn } from './seeds/corn.js';
 import { createSunflower } from './seeds/sunflower.js';
-import { addPlant } from './field.js';
+import { addPlant, usePlants } from './field.js';
+
 
 export const plantSeeds = (plan) => {
   for (let i = 0; i < plan.length; i++) {
@@ -30,4 +31,6 @@ export const plantSeeds = (plan) => {
       }
     }
   }
+  const output = usePlants()
+  return output
 };

@@ -7,30 +7,43 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
+  color: #404040;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
 
 .blue {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 .green {
-    background-color: darkseagreen;
+  background-color: darkseagreen;
 }
 
 .purple {
-    background-color: mediumorchid;
+  background-color: mediumorchid;
 }
 
 .red {
-    background-color: darksalmon;
+  background-color: darksalmon;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0 0 0;
+  background-color: #fff3b0;
+}

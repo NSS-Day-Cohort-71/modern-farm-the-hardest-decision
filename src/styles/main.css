@@ -46,24 +46,11 @@ h6 {
   align-items: center;
   margin: 0 0 0 0;
   background-color: #fff3b0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .plant {
   padding: 10px;
-}
-
-.plant-catalog {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  background-attachment: #fff3b0;
-}
-
-.plant-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  padding: 20px;
 }

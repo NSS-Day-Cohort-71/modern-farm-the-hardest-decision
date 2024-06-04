@@ -6,7 +6,6 @@ import { createCorn } from './seeds/corn.js';
 import { createSunflower } from './seeds/sunflower.js';
 import { addPlant, usePlants } from './field.js';
 
-
 export const plantSeeds = (plan) => {
   for (let i = 0; i < plan.length; i++) {
     for (let j = 0; j < plan[i].length; j++) {
@@ -31,6 +30,6 @@ export const plantSeeds = (plan) => {
       }
     }
   }
-  const output = usePlants()
-  return output
+  const output = usePlants();
+  return output;
 };

@@ -1,7 +1,5 @@
 export const Catalog = (arr) => {
   // Sort the harvested plants array by the plant type property.
-  arr.sort((a, b) => a.type.localeCompare(b));
-
   let plantCounts = [];
 
   for (const plant of arr) {

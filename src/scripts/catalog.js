@@ -1,5 +1,5 @@
 export const Catalog = (arr) => {
-  let Catalog = "";
+  let Catalog = '';
 
   for (const harvest of arr) {
     Catalog += `

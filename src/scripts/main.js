@@ -10,10 +10,17 @@ const yearlyPlan = createPlan();
 
 const plantedSeeds = plantSeeds(yearlyPlan);
 
-const harvestedPlants = harvestPlants(plantedSeeds)
+const harvestedPlants = harvestPlants(plantedSeeds);
+harvestedPlants.sort((a, b) => {
+  if (a.type < b.type) {
+    return -1;
+  } else if (a.type > b.type) {
+    return 1;
+  }
+  return 0;
+});
+const plantsForSale = Catalog(harvestedPlants);
 
-const plantsForSale = Catalog(harvestedPlants)
+const plantSale = document.querySelector('.container');
 
-const plantSale = document.querySelector(".container")
-
-plantSale.innerHTML = plantsForSale
+plantSale.innerHTML = plantsForSale;

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
 
 /*Typography
 --------------------------------------------------------------*/
@@ -8,7 +8,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Comfortaa", Arial, sans-serif;
+  font-family: 'Comfortaa', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Patua One", serif;
+  font-family: 'Patua One', serif;
   letter-spacing: 2px;
 }
 
@@ -56,21 +56,34 @@ h6 {
 }
 
 .plant-catalog {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 3fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 3fr)); */
   gap: 30px;
   padding: 20px;
   background-color: #fff3b0;
-  border: 1px solid #404040;
+  border: 3px solid #404040;
   border-radius: 8%;
+  width: 75%;
+  margin: 10px;
 }
 
 .plant-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   padding: 24px;
   border: 1px solid #404040;
   border-radius: 10px;
+  width: 76%;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.plant-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  cursor: grab;
 }

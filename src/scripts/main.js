@@ -1,5 +1,6 @@
 console.log("Welcome to the main module");
 import { addPlant, usePlants } from "./field.js";
+import { harvestPlants } from "./harvester.js";
 import { createPlan } from "./plan.js";
 import { createCorn } from "./seeds/corn.js";
 
@@ -11,3 +12,7 @@ const cornSeed = createCorn();
 addPlant(cornSeed);
 const currentGrowingPlants = usePlants();
 console.log(currentGrowingPlants);
+
+const test = harvestPlants(currentGrowingPlants)
+
+console.log(test)

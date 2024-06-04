@@ -1,0 +1,47 @@
+Sequence Diagram URL: https://shorturl.at/9VIbW
+
+
+
+
+title Modern Farm
+
+Main -> Plan: Invokes createPlan() function
+
+note over Plan: Generates a random array of crops to plant
+
+Main<--Plan: returns array and sets it to the variable yearlyPlan
+
+Main->Tractor: Invokes plantSeeds() function with yearlyPlan as the argument
+
+loop plantSeeds
+note over Tractor: loops through yearlyPlan array to find out which seeds to plant.
+Tractor->Field: invokes addPlant() function for each element from the yearlyPlan array
+loop addPlant
+note over Field: pushes each seed from the yearlyPlan to the growingPlants array
+end
+Tractor->Field: invokes usePlants() function
+note over Field: runs the usePlants() function to make a copy of the growingPlants array
+Tractor<--Field: returns the copy of growingPlants array
+end
+
+Main<--Tractor: Returns copy of growingPlants array and sets it to variable plantedSeeds
+
+Main->Harvester: invokes harvestPlants() function with plantedSeeds as the argument
+
+loop 
+note over Harvester: Loops through plantedSeeds and pushes crop output to seedOutput array
+end
+
+Main<--Harvester: returns seedOutput array and saves it to variable harvestedPlants
+
+Main->Catalog: invokes catalog() function with harvestedPlants as the argument
+
+loop
+note over Catalog: loops thorugh harvestedPlants to create an HTML string to represent each harvested crop
+end
+
+Main<--Catalog: returns HTML string of all crops and saves it to the variable cropsForSale
+
+note over Main: Grabs class containter from DOM and saves it to the variable plantSale
+
+note over Main: Sets innerHTML of plantSale to string saved in plantsForSale

@@ -16,5 +16,13 @@ export const harvestPlants = (plants) => {
       }
     }
   }
+  seedOutput.sort((a, b) => {
+    if (a.type < b.type) {
+      return -1;
+    } else if (a.type > b.type) {
+      return 1;
+    }
+    return 0;
+  });
   return seedOutput; //Return [] harvested plants + unique IDs.
 };

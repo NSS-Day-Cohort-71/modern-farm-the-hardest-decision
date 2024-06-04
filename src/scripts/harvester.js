@@ -14,7 +14,6 @@ export const harvestPlants = (plants) => {
       for (let i = 0; i < plant.output; i++) {
         seedOutput.push({ ...plant, id: plantId++ });
       }
-      for (let i = 0; i < plant.output; i++) seedOutput.push(plant);
     }
   }
   return seedOutput; //Return [] harvested plants + unique IDs.

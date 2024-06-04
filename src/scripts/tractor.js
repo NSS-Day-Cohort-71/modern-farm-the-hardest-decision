@@ -12,7 +12,6 @@ export const plantSeeds = (plan) => {
       if (plan[i][j] === 'Potato') {
         let potatoSeed = createPotato();
         addPlant(potatoSeed);
-        plantArr.push(potatoSeed);
       } else if (plan[i][j] === 'Asparagus') {
         let asparagusSeed = createAsparagus();
         addPlant(asparagusSeed);

@@ -1,7 +1,4 @@
-Sequence Diagram URL: https://shorturl.at/9VIbW
-
-
-
+Sequence Diagram URL: https://shorturl.at/D3EMJ
 
 title Modern Farm
 
@@ -29,15 +26,24 @@ Main<--Tractor: Returns copy of growingPlants array and sets it to variable plan
 Main->Harvester: invokes harvestPlants() function with plantedSeeds as the argument
 
 loop 
+note over Harvester: Alphabetizes seedOutput
 note over Harvester: Loops through plantedSeeds and pushes crop output to seedOutput array
 end
 
 Main<--Harvester: returns seedOutput array and saves it to variable harvestedPlants
 
-Main->Catalog: invokes catalog() function with harvestedPlants as the argument
+Main->Catalog: invokes addPlantCounter() with harvested plants as the argument
+
+loop 
+note over Catalog:counts amount of each crop harvested
+end
+
+Main<--Catalog: returns crop count and saves it to the variable countedPlants
+
+Main->Catalog: invokes catalog() function with countedPlants as the argument
 
 loop
-note over Catalog: loops thorugh harvestedPlants to create an HTML string to represent each harvested crop
+note over Catalog: loops thorugh countedPlants to create an HTML string to represent each harvested crop
 end
 
 Main<--Catalog: returns HTML string of all crops and saves it to the variable cropsForSale

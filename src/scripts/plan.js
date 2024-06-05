@@ -10,9 +10,10 @@ export const createPlan = () => {
     }
     plan.push(row);
   }
-
   return plan;
 };
+
+
 
 /*
     This is a generator function used to randomly

@@ -4,6 +4,7 @@ import { harvestPlants } from "./harvester.js";
 import { createPlan } from "./plan.js";
 import { plantSeeds } from "./tractor.js";
 
+
 const yearlyPlan = createPlan();
 
 const plantedSeeds = plantSeeds(yearlyPlan);
@@ -15,3 +16,4 @@ const plantsForSale = Catalog(harvestedPlants);
 const plantSale = document.querySelector(".container");
 
 plantSale.innerHTML = plantsForSale;
+

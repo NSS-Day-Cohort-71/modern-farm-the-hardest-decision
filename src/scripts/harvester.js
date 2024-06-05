@@ -1,5 +1,14 @@
 let plantId = 1; //Initialize a var to keep track of the unique IDs.
 
+const sortSeeds = (a, b) => {
+  if (a.type < b.type) {
+    return -1
+  } else if (a.type > b.type) {
+    return 1
+  }
+  return 0
+}
+
 export const harvestPlants = (plants) => {
   let seedOutput = []; //Initialize empty array to store harvested plants.
   for (const plant of plants) {
@@ -16,13 +25,8 @@ export const harvestPlants = (plants) => {
       }
     }
   }
-  seedOutput.sort((a, b) => {
-    if (a.type < b.type) {
-      return -1;
-    } else if (a.type > b.type) {
-      return 1;
-    }
-    return 0;
-  });
+  seedOutput.sort(sortSeeds)
   return seedOutput; //Return [] harvested plants + unique IDs.
 };
+
+

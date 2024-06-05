@@ -33,4 +33,5 @@ export const harvestPlants = (plants) => {
   }
   seedOutput.sort(sortSeeds);
   return seedOutput; //Return [] harvested plants + unique IDs.
+ 
 };

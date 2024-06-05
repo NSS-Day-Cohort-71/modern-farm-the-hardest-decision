@@ -15,15 +15,23 @@ const plantedSeeds = plantSeeds(yearlyPlan);
 
 const harvestedPlants = harvestPlants(plantedSeeds);
 
-const countedPlants = addPlantCounter(harvestedPlants);
+// const countedPlants = addPlantCounter(harvestedPlants);
 
-const plantsForSale = Catalog(countedPlants);
+processedFoods();
+
+// const plantsForSale = Catalog(countedPlants);
+
+const processedFoodsForSale = addPlantCounter(farmStore)
+
+const processedCatalog = Catalog(processedFoodsForSale)
 
 const plantSale = document.querySelector('.container');
 
-plantSale.innerHTML = plantsForSale;
+plantSale.innerHTML = processedCatalog;
 
-processedFoods();
+
+
+console.log(harvestedPlants)
 
 // console.log(storageBarn);
 
